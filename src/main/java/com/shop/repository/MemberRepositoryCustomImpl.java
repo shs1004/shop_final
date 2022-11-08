@@ -55,8 +55,8 @@ public class MemberRepositoryCustomImpl implements MemberRepositoryCustom{
 
         if(StringUtils.equals("name", searchBy)){
             return QMember.member.name.like("%" + searchQuery + "%");
-        } else if(StringUtils.equals("createdBy", searchBy)){
-            return QMember.member.createdBy.like("%" + searchQuery + "%");
+        } else if(StringUtils.equals("email", searchBy)){
+            return QMember.member.email.like("%" + searchQuery + "%");
         }
 
         return null;
